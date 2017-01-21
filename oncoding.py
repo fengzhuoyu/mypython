@@ -73,3 +73,33 @@ print('-' * 20)
 a[1] = 'c++'
 c = b[0] + 'o' + b[2:]
 print(a, b, c)
+
+citys = ['suzhou', 'tangshan', 'beijing', 'shanghai']
+city_codes = ['0512', '0315', '010', '012']
+print('{}:{}'.format(citys[0], city_codes[0]))
+person = {'name': 'fengzy', 'site': 'newpm.net', 'lang': 'python'}
+p = person['name']
+person['name2'] = 'joey'
+person['name3'] = 'fengzy'
+del person['name2']
+
+print(person)
+print(len(person))
+print('name' in person)
+
+print('-' * 20)
+city_code = {
+    'suzhou': '0512',
+    'beijing': '010',
+    'tangshan': '0315',
+    'nanjng': '025'
+}
+l = 'suzhou is a beautiful city, its area code is %s!' % city_code['suzhou']
+l2 = '\nsuzhou is a beautiful city, its area code is %(suzhou)s!' % city_code
+print(l, l2)
+print('-' * 20)
+my = {'name': 'fengzy', 'lang': 'python'}
+temp = '<html><head><title>%(lang)s</title></head><body><p>My name is %(name)s.</p></body></html>'
+temp2 = '\n<html><head><title>{}</title></head><body><p>My name is {}.</p></body></html>'.format(my['lang'], my['name'])
+
+print(temp % my, temp2)
