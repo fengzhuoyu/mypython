@@ -24,8 +24,6 @@ clist = ['小亮', '小明', '大王']
 
 e = alist + blist
 
-
-
 print(e, 1 in blist, min(alist), max(clist))
 
 a = ['python', 'like', 'I']
@@ -40,11 +38,38 @@ print(b, c, d)
 print(a[2] == a[-2])
 
 print(dir(list))
-print(a.__add__('y'))
 
+clist = ['python', 'fengzy']
 
+clist.extend(['1111', '444'])
+clist.append([22, 33])
 
+a = clist.index('1111')
+clist.insert(0, ['插入', '列表'])
 
+print(clist, a)
 
+print('-' * 20)
 
+a = ['python', 'c', 'php', 'python', 'java']
+while 'python' in a:
+    a.remove('python')
+    print(a)
+else:
+    print('no python!')
 
+a.pop(-1)
+
+print(a)
+
+b = 'hi you!'
+for n in b.split():
+    c = list(n)
+    print(c)
+
+print('-' * 20)
+print(a + c, len(c), len(b))
+print('-' * 20)
+a[1] = 'c++'
+c = b[0] + 'o' + b[2:]
+print(a, b, c)
