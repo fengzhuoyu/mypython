@@ -124,9 +124,9 @@ tl1 = type(l1)
 print(ts1, tl1, dir(s1))
 
 a_set = set('fengzy')
-a_set.add('[1, "2", "fengzy"]')
+a_set.add('[1, "2", "fengzy"]') #为集合添加一个元素
 print(a_set)
 
-f_set = frozenset('fengzy')
+f_set = frozenset('fengzy') #创建一个冻结集合，不可修改的
 print(f_set)
 
