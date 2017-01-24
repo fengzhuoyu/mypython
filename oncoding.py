@@ -103,3 +103,30 @@ temp = '<html><head><title>%(lang)s</title></head><body><p>My name is %(name)s.<
 temp2 = '\n<html><head><title>{}</title></head><body><p>My name is {}.</p></body></html>'.format(my['lang'], my['name'])
 
 print(temp % my, temp2)
+print('-' * 20)
+s1 = set('ffengzy') #实验创建集合
+print(s1)
+
+d = {'[1, 2]': '123', '(1, 2)': 'hwi'} #实验字典的key是否可以使用list（结果：可以）
+print(type(d)) #类形是dict
+
+
+s2 = {'facebook', 'book', 123} #实验创建集合
+ns2 = type(s2) #类型是set
+s4 = set(['123', '222'])
+print(s2, ns2, s4)
+print('-' * 20)
+
+s1 = set([1, 2, 3])
+ts1 = type(s1)
+l1 = list(s1)
+tl1 = type(l1)
+print(ts1, tl1, dir(s1))
+
+a_set = set('fengzy')
+a_set.add('[1, "2", "fengzy"]')
+print(a_set)
+
+f_set = frozenset('fengzy')
+print(f_set)
+
