@@ -104,15 +104,14 @@ temp2 = '\n<html><head><title>{}</title></head><body><p>My name is {}.</p></body
 
 print(temp % my, temp2)
 print('-' * 20)
-s1 = set('ffengzy') #实验创建集合
+s1 = set('ffengzy')  # 实验创建集合
 print(s1)
 
-d = {'[1, 2]': '123', '(1, 2)': 'hwi'} #实验字典的key是否可以使用list（结果：可以）
-print(type(d)) #类形是dict
+d = {'[1, 2]': '123', '(1, 2)': 'hwi'}  # 实验字典的key是否可以使用list（结果：可以）
+print(type(d))  # 类形是dict
 
-
-s2 = {'facebook', 'book', 123} #实验创建集合
-ns2 = type(s2) #类型是set
+s2 = {'facebook', 'book', 123}  # 实验创建集合
+ns2 = type(s2)  # 类型是set
 s4 = set(['123', '222'])
 print(s2, ns2, s4)
 print('-' * 20)
@@ -124,9 +123,72 @@ tl1 = type(l1)
 print(ts1, tl1, dir(s1))
 
 a_set = set('fengzy')
-a_set.add('[1, "2", "fengzy"]') #为集合添加一个元素
+a_set.add('[1, "2", "fengzy"]')  # 为集合添加一个元素
 print(a_set)
 
-f_set = frozenset('fengzy') #创建一个冻结集合，不可修改的
+f_set = frozenset('fengzy')  # 创建一个冻结集合，不可修改的
 print(f_set)
 
+for i in [1, 2, 3, 4]:
+    print(i)
+
+print(pow(3, 2))
+
+print('-' * 20)
+
+'''
+print('请输入任意一个数字：')
+number = int(input())
+
+if number == 10:
+    print('您输入的数字是： %d' % number)
+    print('You are smart!')
+elif number > 10:
+    print('您输入的数字是： %d' % number)
+    print('大了大了！')
+elif number < 10:
+    print('您输入的数字是： %d' % number)
+    print('小了小了！')
+else:
+    print('Are you a human?')
+'''
+
+hello = 'world'
+for i in range(len(hello)):
+    print(hello[i])
+
+# 创建一个0-100能够被3整除的列表
+z_int = []  # 创建一个空列表
+for n in range(0, 100):  # 将0-100每个数字代入n
+    if n % 3 == 0:  # 如果n能够被3整除
+        z_int.append(n)  # 向列表内放入一个n
+print(z_int)  # 打印列表结果
+
+# 学以致用，将上述代码简化
+n = range(0, 100, 3)  # 设n为0-100，步长为3的数字
+print(list(n))  # 将n转化为列表并打印
+
+# 创建一个字典
+a_dict = {'name': 'fengzy', 'lang': 'python', 'email': 'beyond0420@126.com', 'web': 'newpm.net'}
+# 获取字典键值对方法一
+for k in a_dict.keys():
+    print(k, a_dict[k])
+# 获取字典键值对方法二
+for k, v in a_dict.items():
+    print(k, v)
+# 获取值
+for v in a_dict.values():
+    print(v)
+
+a = [1, 2, 3, 4, 5]
+b = [9, 8, 7, 6, 5]
+c = []
+for i in range(5):
+    c.append(a[i] + b[i])
+print(c)
+# 使用zip函数解决上段代码问题
+print(list(zip(a)))
+d = []
+for x, y in zip(a, b):
+    d.append(x + y)
+print(d)
