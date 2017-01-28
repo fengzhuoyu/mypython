@@ -192,3 +192,87 @@ d = []
 for x, y in zip(a, b):
     d.append(x + y)
 print(d)
+
+'''
+# 数字游戏
+import random
+
+number =  random.randint(1, 100)
+
+guess = 0
+
+while True:
+    num_input = input('请输入1至100的数字！')
+    guess += 1
+    if not num_input.isdigit():
+        print('请输入数字！')
+    elif int(num_input) < 0 or int(num_input) >= 100:
+        print('输入数字必须为1至100的整数！')
+    else:
+        if number == int(num_input):
+            print('OK, you are good. It is only %d,then you successed.' % guess)
+            break
+        elif number > int(num_input):
+            print('your number is more less.')
+        elif number < int(num_input):
+            print('your number is bigger.')
+        else:
+            print('There is something bad, I will not work.')
+'''
+
+print('-' * 20)
+
+count = 0
+while count < 5:
+    print(count, 'is less than5')
+    count += 1
+else:
+    print(count, 'is not less than 5')
+
+from math import sqrt
+
+for n in range(99, 1, -1):
+    root = sqrt(n)
+    if root == int(root):
+        print(n)
+        break
+else:
+    print('Nothing!')
+
+f = open('README.MD')
+for line in f:
+    print(line)
+f.close()
+
+with open('README.MD', 'r') as f:
+    print(f.read())
+
+print('-' * 20)
+
+a, b = open('README.MD')
+print(a, b)
+
+# 练习一：包含10个元素的列表，将列表每个元素依次向前移动一个位置，然后输出这个列表
+raw = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]  # 假设列表raw包含10个数字
+i = 0  # 默认起始次数
+while i < 10:  # 设定条件，当i小于10时
+    b = raw.pop(0)  # 将从列表起始位置删除的成员赋值给b
+    raw.append(b)  # 在列表末尾追加被删除的成员
+    i += 1  # 将循环次数加1
+    print(raw)  # 打印列表
+
+print('-' * 20)
+
+import random  # 导入随机数模块
+
+score = [random.randint(0, 100) for i in range(40)]  # 取得40个0-100的随机数以列表的形式赋值给score
+print(score)  # 打印分数列表
+
+num = len(score)  # 获取分数的个数
+sum_score = sum(score)  # 求分数之和
+ave_num = sum_score / num  # 求平均分
+less_ave = len([i for i in score if i < ave_num])  # 过滤出小于平均分的分数，并取得个数
+print('小于平均分的学生有 %d 个' % less_ave)  # 打印个数
+
+sorted_score = sorted(score, reverse=True)  # 按照倒序排列分数
+print(sorted_score)  # 打印排列后的分数
