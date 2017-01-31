@@ -276,3 +276,40 @@ print('小于平均分的学生有 %d 个' % less_ave)  # 打印个数
 
 sorted_score = sorted(score, reverse=True)  # 按照倒序排列分数
 print(sorted_score)  # 打印排列后的分数
+
+print('-' * 20)
+
+string = 'I love  code.'  # 设定一个字符串
+print(string)  # 打印字符串
+
+str_lst = string.split(' ')  # 将字符串通过一个空格进行分割
+
+print(str_lst)  # 打印分割后的字符串
+
+words = [s for s in str_lst if s != '']  #将非空格的字符串代入s，目的是删除空格
+print(words)  # 打印字符串
+
+new_string = ' '.join(words)  # 以空格为连字符组装字符串
+print(new_string)  # 打印组装后的字符串
+
+print('-' * 20)
+
+a, b = 0, 1
+for i in range(4):
+    a, b = b, a + b
+print(a)
+
+print('-' * 20)
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def getName(self):
+        return self.name
+
+    def color(self, color):
+        print('%s is %s' % (self.name, color))
+
+me = Person('fengzy')
+me.color('white')
