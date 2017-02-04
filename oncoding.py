@@ -286,7 +286,7 @@ str_lst = string.split(' ')  # 将字符串通过一个空格进行分割
 
 print(str_lst)  # 打印分割后的字符串
 
-words = [s for s in str_lst if s != '']  #将非空格的字符串代入s，目的是删除空格
+words = [s for s in str_lst if s != '']  # 将非空格的字符串代入s，目的是删除空格
 print(words)  # 打印字符串
 
 new_string = ' '.join(words)  # 以空格为连字符组装字符串
@@ -301,6 +301,7 @@ print(a)
 
 print('-' * 20)
 
+
 class Person:
     def __init__(self, name):
         self.name = name
@@ -311,5 +312,28 @@ class Person:
     def color(self, color):
         print('%s is %s' % (self.name, color))
 
+
 me = Person('fengzy')
 me.color('white')
+
+print('-' * 20, 'Thinking Python', '-' * 20)
+
+import turtle  # 导入turtle模块
+
+bob = turtle.Turtle()  # 调用Turtle函数，将返回值赋给bob
+
+
+def square(t):
+    """
+    定义一个square函数，使对象向前100px后左转，并反复3次。最后前进100px对正方形进行封口后开启窗口
+    :param t: 必须是一只乌龟
+    :return: None
+    """
+    for i in range(3):
+        t.fd(100)
+        t.lt(90)
+    t.fd(100)
+    turtle.mainloop()
+
+
+square(bob)  # 调用函数
