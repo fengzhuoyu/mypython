@@ -1,4 +1,5 @@
 # coding:utf-8
+
 name = '冯卓雨'
 print(name)
 
@@ -239,17 +240,18 @@ for n in range(99, 1, -1):
 else:
     print('Nothing!')
 
-f = open('README.MD')
+import codecs
+f = codecs.open('README.MD', 'r', 'utf-8')
 for line in f:
     print(line)
 f.close()
 
-with open('README.MD', 'r') as f:
+with codecs.open('README.MD', 'r', 'utf-8') as f:
     print(f.read())
 
 print('-' * 20)
 
-a, b = open('README.MD')
+a, b = codecs.open('README.MD', 'r', 'utf-8')
 print(a, b)
 
 # 练习一：包含10个元素的列表，将列表每个元素依次向前移动一个位置，然后输出这个列表
@@ -318,6 +320,8 @@ me.color('white')
 
 print('-' * 20, 'Thinking Python', '-' * 20)
 
+'''
+
 import turtle  # 导入turtle模块
 
 bob = turtle.Turtle()  # 调用Turtle函数，将返回值赋给bob
@@ -337,3 +341,12 @@ def square(t):
 
 
 square(bob)  # 调用函数
+
+'''
+
+print('-' * 20, '推算猫咪生日', '-' * 20)
+import time  # 导入time模块
+t = time.time()  # 获取当前时间戳
+td = t - 60 * 60 * 24 * 56  # 当前时间戳减去56天的秒数
+hd = time.strftime('%Y-%m-%d', time.localtime(td))  # 格式化时间
+print(hd)  # 打印时间
